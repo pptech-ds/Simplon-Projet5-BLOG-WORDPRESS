@@ -1,12 +1,27 @@
+<?php 
+
+$posts = getAllPosts();
+foreach($posts as $num => $post){
+
+?>
+
 <article class="hentry">
     <header class="entry-header">
         <div class="entry-thumbnail">
-            <a href="http://localhost/simplon/Simplon-Projet5-Blog/view/post.php?id=1"><img
-                    src="https://picsum.photos/300/300?random=1"></a>
+            <a href="http://localhost/simplon/Simplon-Projet5-Blog/view/post.php?id=<?= $post['ID'] ?>"><img
+                    src="https://picsum.photos/300/300?random=<?= $num ?>"></a>
         </div>
-        <h2 class="entry-title"><a href="portfolio-item.html" rel="bookmark">Sunset Beach</a></h2>
-        <a class='portfoliotype' href='portfolio-category.html'>summer</a>
-        <a class='portfoliotype' href='portfolio-category.html'>woman</a>
-        <a class='portfoliotype' href='portfolio-category.html'>yellow</a>
+        <h2 class="entry-title"><a
+                href="http://localhost/simplon/Simplon-Projet5-Blog/view/post.php?id=<?= $post['ID'] ?>"
+                rel="bookmark"><?= $post['post_title'] ?></a></h2>
+        <a class='portfoliotype'
+            href='http://localhost/simplon/Simplon-Projet5-Blog/view/post.php?id=<?= $post['ID'] ?>'>Posté par
+            <?= $post['display_name'] ?></a>
+        <a class='portfoliotype'
+            href='http://localhost/simplon/Simplon-Projet5-Blog/view/post.php?id=<?= $post['ID'] ?>'>Le
+            <?= $post['post_date'] ?></a>
     </header>
 </article>
+
+<?php
+}
