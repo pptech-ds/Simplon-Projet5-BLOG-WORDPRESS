@@ -1,11 +1,23 @@
-<article class="hentry">
-<header class="entry-header">
-<div class="entry-thumbnail">
-    <a href="portfolio-item.php?id=1"><img src="https://picsum.photos/300/300?random=1"></a>
-</div>
-<h2 class="entry-title"><a href="portfolio-item.html" rel="bookmark">Sunset Beach</a></h2>
-<a class='portfoliotype' href='portfolio-category.html'>summer</a>
-<a class='portfoliotype' href='portfolio-category.html'>woman</a>
-<a class='portfoliotype' href='portfolio-category.html'>yellow</a>
-</header>
-</article>
+<!DOCTYPE html>
+<html lang="fr">
+
+<?php require 'head.php' ?>
+
+<body class="single single-post">
+    <div id="page">
+        <div class="container">
+            <?php require 'headerSiteDescription.php' ?>
+            <?php require 'postSingle.php'; ?>
+        </div>
+        <!-- .container -->
+        <?php require 'footerSiteDescription.php' ?>
+        <a href="#top" class="smoothup" title="Back to top"><span class="genericon genericon-collapse"></span></a>
+    </div>
+    <!-- #page -->
+    <script src='js/jquery.js'></script>
+    <script src='js/plugins.js'></script>
+    <script src='js/scripts.js'></script>
+    <script src='js/masonry.pkgd.min.js'></script>
+</body>
+
+</html>
