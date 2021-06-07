@@ -33,7 +33,7 @@ $post = getOnePost($_GET);
                 <h1 class="screen-reader-text">Post navigation</h1>
                 <div class="nav-links">
                     <div class="nav-previous">
-                        <a href="http://localhost/simplon/Simplon-Projet5-Blog/index.php" rel="prev"><span
+                        <a href="http://localhost/simplon/Simplon-Projet5-BLOG-WORDPRESS/index.php" rel="prev"><span
                                 class="meta-nav">←</span> Merci d'avoir lu l'article!</a>
                     </div>
                 </div>

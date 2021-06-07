@@ -4,7 +4,7 @@ function getDBConnection() :PDO
 {
     $user = 'root';
     $pass = '';
-    $dbname = 'pepinieres_baches';
+    $dbname = 'pepinieres_baches_2';
     $host = 'localhost';
 
     try {

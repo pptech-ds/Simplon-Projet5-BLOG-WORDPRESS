@@ -8,7 +8,7 @@
         ?>
         <li class="recentcomments">
             <a
-                href="http://localhost/simplon/Simplon-Projet5-Blog/view/post.php?id=<?= $comment['ID'] ?>"><?= $comment['comment_content'] ?></a>
+                href="http://localhost/simplon/Simplon-Projet5-BLOG-WORDPRESS/view/post.php?id=<?= $comment['ID'] ?>"><?= $comment['comment_content'] ?></a>
         </li>
 
 

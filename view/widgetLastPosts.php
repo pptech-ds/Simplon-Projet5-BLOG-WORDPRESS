@@ -8,7 +8,7 @@
         ?>
         <li>
             <a
-                href="http://localhost/simplon/Simplon-Projet5-Blog/view/post.php?id=<?= $post['ID'] ?>"><?= $post['post_title'] ?></a>
+                href="http://localhost/simplon/Simplon-Projet5-BLOG-WORDPRESS/view/post.php?id=<?= $post['ID'] ?>"><?= $post['post_title'] ?></a>
 
         </li>
         <?php } ?>
