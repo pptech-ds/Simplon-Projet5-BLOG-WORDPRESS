@@ -8,6 +8,7 @@ echo 'in SEARCH';
 <html lang="fr">
 
 <?php require 'head.php' ?>
+<?php require '../model/model.php' ?>
 
 <body class="home page page-template page-template-template-portfolio page-template-template-portfolio-php">
     <div id="page">
@@ -20,7 +21,7 @@ echo 'in SEARCH';
                     <main id="main" class="site-main">
                         <div class="grid portfoliogrid">
 
-                            <p>TEST</p>
+                            <?php require 'searchFrame.php' ?>
 
                         </div>
                     </main>
@@ -32,10 +33,7 @@ echo 'in SEARCH';
 
         <a href="#top" class="smoothup" title="Back to top"><span class="genericon genericon-collapse"></span></a>
     </div>
-    <script src='js/jquery.js'></script>
-    <script src='js/plugins.js'></script>
-    <script src='js/scripts.js'></script>
-    <script src='js/masonry.pkgd.min.js'></script>
+    <?php require 'jsScripts.php' ?>
 </body>
 
 </html>

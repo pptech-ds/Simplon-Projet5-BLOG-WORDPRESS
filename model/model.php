@@ -24,7 +24,7 @@ function getDBConnection() :PDO
 }
 
 
-function getAllPosts() :array
+function getAllPosts(string $limit) :array
 {
     try {
         $dbh = getDBConnection();
@@ -33,14 +33,14 @@ function getAllPosts() :array
                         wp_posts.ID,
                         post_title, 
                         post_content,
-                        LEFT(post_content, 100) AS post_content_tr, 
                         post_date, 
                         display_name  
                     FROM wp_posts, wp_users
                     WHERE post_type = "post"
                         AND post_status = "publish"
                         AND post_author = wp_users.ID
-                    ORDER BY post_date DESC';
+                    ORDER BY post_date DESC
+                    LIMIT '.$limit;
 
         $req = $dbh->query($query);
         $req->setFetchMode(PDO::FETCH_ASSOC);
@@ -86,6 +86,43 @@ function getOnePost(array $get) :array
 }
 
 
+
+function getAllComments(string $limit) :array
+{
+    try {
+        $dbh = getDBConnection();
+
+        $query = '  SELECT 
+                        wp_posts.ID,
+                        post_title, 
+                        post_content,
+                        post_date, 
+                        comment_author,
+                        comment_content  
+                    FROM wp_posts
+                    INNER JOIN wp_comments ON wp_posts.ID = wp_comments.comment_post_ID
+                    WHERE post_type = "post"
+                        AND post_status = "publish"
+                    ORDER BY post_date DESC
+                    LIMIT '.$limit;
+
+        $req = $dbh->query($query);
+        $req->setFetchMode(PDO::FETCH_ASSOC);
+        $posts = $req->fetchAll();
+        $req->closeCursor();
+
+        $dbh = null;
+
+        return $posts;
+
+    } catch (PDOException $e) {
+        print 'Error !: ' . $e->getMessage() . '<br/>';
+        die();
+    }
+}
+
+
+
 function search(array $get) :array
 {
     try {
@@ -106,7 +143,7 @@ function search(array $get) :array
                     ORDER BY post_date DESC';
 
         $req = $dbh->prepare($query);
-        $req -> bindValue(':s', '%'.$_GET['s'].'%', PDO::PARAM_STR);
+        $req -> bindValue(':s', '%'.$get['s'].'%', PDO::PARAM_STR);
         $req -> execute();
         $req ->setFetchMode(PDO::FETCH_ASSOC);
         $posts = $req->fetchAll();

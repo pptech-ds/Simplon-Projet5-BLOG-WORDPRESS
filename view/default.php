@@ -26,10 +26,7 @@
 
         <a href="#top" class="smoothup" title="Back to top"><span class="genericon genericon-collapse"></span></a>
     </div>
-    <script src='js/jquery.js'></script>
-    <script src='js/plugins.js'></script>
-    <script src='js/scripts.js'></script>
-    <script src='js/masonry.pkgd.min.js'></script>
+    <?php require 'view/jsScripts.php' ?>
 </body>
 
 </html>

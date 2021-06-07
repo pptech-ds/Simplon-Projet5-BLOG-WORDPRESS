@@ -1,13 +1,17 @@
 <aside id="recent-comments-2" class="widget widget_recent_comments">
-    <h4 class="widget-title">Recent Comments</h4>
+    <h4 class="widget-title">Commentaires Récents</h4>
     <ul id="recentcomments">
-        <li class="recentcomments"><span>ThemePush</span> on <a href="blog-single.html">Male T-Shirt</a>
+
+        <?php 
+            $comments = getAllComments('3');
+            foreach($comments as $num => $comment){
+        ?>
+        <li class="recentcomments">
+            <a
+                href="http://localhost/simplon/Simplon-Projet5-Blog/view/post.php?id=<?= $comment['ID'] ?>"><?= $comment['comment_content'] ?></a>
         </li>
-        <li class="recentcomments"><span>ThemePush</span> on <a href="blog-single.html">Male T-Shirt</a>
-        </li>
-        <li class="recentcomments"><span><a href="#" rel="external nofollow" class="url">Mr
-                    WordPress</a></span> on <a href="blog-single.html">Thanks for watching!</a></li>
-        <li class="recentcomments"><span>Maria</span> on <a href="blog-single.html">Gray Blouse</a></li>
-        <li class="recentcomments"><span>Maria</span> on <a href="blog-single.html">Retro Dress</a></li>
+
+
+        <?php } ?>
     </ul>
 </aside>
