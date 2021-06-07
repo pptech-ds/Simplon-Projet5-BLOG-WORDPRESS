@@ -1,6 +1,6 @@
 <?php 
 
-$posts = getAllPosts('100');
+$posts = search($_GET);
 foreach($posts as $num => $post){
 
 ?>

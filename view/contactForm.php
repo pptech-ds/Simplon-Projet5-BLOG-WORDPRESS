@@ -60,34 +60,30 @@
 
                                 <div class="wpcmsdev-columns">
                                     <div class="column column-width-one-half">
-                                        <h4>Quick Contact</h4>
+                                        <h4>Formulaire de Contact</h4>
 
                                         <form class="wpcf7" method="post" action="contact.php" id="contactform">
                                             <div class="form">
-                                                <p><input type="text" name="name" placeholder="Name *"></p>
-                                                <p><input type="text" name="email" placeholder="E-mail Address *"></p>
+                                                <p><input type="text" name="name" placeholder="Nom *"></p>
+                                                <p><input type="text" name="email" placeholder="E-mail *"></p>
                                                 <p><textarea name="comment" rows="3" placeholder="Message *"></textarea>
                                                 </p>
-                                                <input type="submit" id="submit" class="clearfix btn" value="Send">
+                                                <input type="submit" id="submit" class="clearfix btn" value="Envoyer">
                                             </div>
                                         </form>
                                         <div class="done">
-                                            Your message has been sent. Thank you!
+                                            Votre message a été envoyé, merci !
                                         </div>
 
                                     </div>
                                     <div class="column column-width-one-half">
-                                        <h4>Find Us: (888) 252 389 3571</h4>
+                                        <h4>Telephonez nous au: (+33) 4 68 96 42 91</h4>
                                         <p>
-                                            If you want to hire me or have any feedback or questions about our service
-                                            in general, please send us a message by completing our enquiry form. It’s
-                                            best to call though, someone we’ll always be there for you.
+                                            Pépinières Bachès <br>
+                                            66500 Las Feyches <br>
+                                            66500 Eus <br>
                                         </p>
-                                        <p>
-                                            Monday – Friday: 9am to 5pm<br>
-                                            Saturday: 10am to 2pm<br>
-                                            Sunday: Closed
-                                        </p>
+
                                     </div>
                                 </div>
                             </div>
@@ -105,11 +101,7 @@
         <a href="#top" class="smoothup" title="Back to top"><span class="genericon genericon-collapse"></span></a>
     </div>
     <!-- #page -->
-    <script src='js/jquery.js'></script>
-    <script src='js/plugins.js'></script>
-    <script src='js/scripts.js'></script>
-    <script src='js/masonry.pkgd.min.js'></script>
-    <script src='js/validate.js'></script>
+    <?php require 'jsScripts.php' ?>
 </body>
 
 </html>

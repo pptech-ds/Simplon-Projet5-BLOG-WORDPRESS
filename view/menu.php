@@ -6,9 +6,10 @@
             <li><a href="http://localhost/simplon/Simplon-Projet5-Blog/index.php">Acceuil</a></li>
             <li><a href="http://localhost/simplon/Simplon-Projet5-Blog/view/contactForm.php">Contact</a></li>
             <li>
-                <form action="view/search.php">
+                <form action="http://localhost/simplon/Simplon-Projet5-Blog/view/search.php">
                     <label for="search" hidden>Rechercher</label>
-                    <input type="text" name="s" id="search" placeholder="Rechercher">
+                    <input type="text" name="s" id="search" placeholder="Rechercher"
+                        value="<?php isset($_GET['s']) ? $_GET['s'] : 'TEST' ?>">
                     <input type="submit" value="Rechercher">
                 </form>
             </li>
