@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<?php require 'view/head.php' ?>
+<?php require dirname(__DIR__).'/view/head.php' ?>
 
 <body class="home page page-template page-template-template-portfolio page-template-template-portfolio-php">
     <div id="page">
         <div class="container">
 
-            <?php require 'view/headerSiteDescription.php' ?>
+            <?php require dirname(__DIR__).'/view/headerSiteDescription.php' ?>
 
             <div id="content" class="site-content">
                 <div id="primary" class="content-area column full">
                     <main id="main" class="site-main">
                         <div class="grid portfoliogrid">
 
-                            <?php require 'view/postFrame.php' ?>
+                            <?php require dirname(__DIR__).'/view/postFrame.php' ?>
 
                         </div>
                     </main>
@@ -22,11 +22,11 @@
             </div>
         </div>
 
-        <?php require 'view/footerSiteDescription.php' ?>
+        <?php require dirname(__DIR__).'/view/footerSiteDescription.php' ?>
 
         <a href="#top" class="smoothup" title="Back to top"><span class="genericon genericon-collapse"></span></a>
     </div>
-    <?php require 'view/jsScripts.php' ?>
+    <?php require dirname(__DIR__).'/view/jsScripts.php' ?>
 </body>
 
 </html>

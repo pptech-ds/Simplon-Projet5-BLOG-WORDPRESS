@@ -1,5 +1,5 @@
 <?php
-require '../model/model.php';
+require dirname(__DIR__).'/model/model.php';
 
 $post = getOnePost($_GET);
 
@@ -33,14 +33,13 @@ $post = getOnePost($_GET);
                 <h1 class="screen-reader-text">Post navigation</h1>
                 <div class="nav-links">
                     <div class="nav-previous">
-                        <a href="http://localhost/simplon/Simplon-Projet5-BLOG-WORDPRESS/index.php" rel="prev"><span
-                                class="meta-nav">←</span> Merci d'avoir lu l'article!</a>
+                        <a href="index.php" rel="prev"><span class="meta-nav">←</span> Merci d'avoir lu l'article!</a>
                     </div>
                 </div>
                 <!-- .nav-links -->
             </nav>
             <!-- .navigation -->
-            <?php require 'widgetAddComments.php'; ?>
+            <?php require dirname(__DIR__).'/view/widgetAddComments.php'; ?>
             <!-- #comments -->
         </main>
         <!-- #main -->
@@ -48,9 +47,9 @@ $post = getOnePost($_GET);
     <div id="secondary" class="column third">
         <div id="sidebar-1" class="widget-area" role="complementary">
 
-            <?php require 'widgetLastPosts.php'; ?>
+            <?php require dirname(__DIR__).'/view/widgetLastPosts.php'; ?>
 
-            <?php require 'widgetLastComments.php'; ?>
+            <?php require dirname(__DIR__).'/view/widgetLastComments.php'; ?>
 
         </div>
         <!-- .widget-area -->

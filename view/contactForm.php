@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<?php require 'head.php' ?>
+<?php require dirname(__DIR__).'/view/head.php' ?>
 
 <body class="home page page-template page-template-template-portfolio page-template-template-portfolio-php">
     <div id="page">
         <div class="container">
-            <?php require 'headerSiteDescription.php'; ?>
+            <?php require dirname(__DIR__).'/view/headerSiteDescription.php'; ?>
 
             <!-- #masthead -->
             <div id="content" class="site-content">
@@ -97,11 +97,11 @@
             <!-- #content -->
         </div>
         <!-- .container -->
-        <?php require 'footerSiteDescription.php' ?>
+        <?php require dirname(__DIR__).'/view/footerSiteDescription.php' ?>
         <a href="#top" class="smoothup" title="Back to top"><span class="genericon genericon-collapse"></span></a>
     </div>
     <!-- #page -->
-    <?php require 'jsScripts.php' ?>
+    <?php require dirname(__DIR__).'/view/jsScripts.php' ?>
 </body>
 
 </html>
