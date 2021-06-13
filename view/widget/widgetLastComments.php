@@ -3,12 +3,12 @@
     <ul id="recentcomments">
 
         <?php 
-            $comments = getAllComments('3');
+            require dirname(__DIR__,2). '/model/comment.php';
+            $comments = getAllCommentsWithLimit('3');
             foreach($comments as $num => $comment){
         ?>
         <li class="recentcomments">
-            <a
-                href="view/post.php?id=<?= $comment['ID'] ?>"><?= $comment['comment_content'] ?></a>
+            <a href="view/post.php?id=<?= $comment['ID'] ?>"><?= $comment['comment_content'] ?></a>
         </li>
 
 

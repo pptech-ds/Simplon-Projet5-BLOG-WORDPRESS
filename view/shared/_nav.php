@@ -3,8 +3,8 @@
     <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
     <div class="menu-menu-1-container">
         <ul id="menu-menu-1" class="menu">
-            <li><a href="http://localhost/simplon/Simplon-Projetc5-BLOG-WORDPRESS/index.php">Acceuil</a></li>
-            <li><a href="http://localhost/simplon/Simplon-Projetc5-BLOG-WORDPRESS/view/contactForm.php">Contact</a></li>
+            <li><a href="?page=post.all">Acceuil</a></li>
+            <li><a href="contactForm.php">Contact</a></li>
             <li>
                 <form action="view/search.php">
                     <label for="search" hidden>Rechercher</label>
