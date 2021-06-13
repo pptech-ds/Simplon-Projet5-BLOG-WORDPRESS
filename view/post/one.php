@@ -1,10 +1,3 @@
-<?php
-require dirname(__DIR__).'/model/model.php';
-
-$post = getOnePost($_GET);
-
-?>
-
 <div id="content" class="site-content">
     <div id="primary" class="content-area column two-thirds">
         <main id="main" class="site-main" role="main">
@@ -39,7 +32,7 @@ $post = getOnePost($_GET);
                 <!-- .nav-links -->
             </nav>
             <!-- .navigation -->
-            <?php require dirname(__DIR__).'/view/widgetAddComments.php'; ?>
+            <?php require dirname(__DIR__,2).'/view/widget/widgetAddComments.php'; ?>
             <!-- #comments -->
         </main>
         <!-- #main -->
@@ -47,9 +40,9 @@ $post = getOnePost($_GET);
     <div id="secondary" class="column third">
         <div id="sidebar-1" class="widget-area" role="complementary">
 
-            <?php require dirname(__DIR__).'/view/widgetLastPosts.php'; ?>
+            <?php require dirname(__DIR__,2).'/view/widget/widgetLastPosts.php'; ?>
 
-            <?php require dirname(__DIR__).'/view/widgetLastComments.php'; ?>
+            <?php require dirname(__DIR__,2).'/view/widget/widgetLastComments.php'; ?>
 
         </div>
         <!-- .widget-area -->
